@@ -3,7 +3,9 @@ import { GET_ALL_CHARACTERS } from './queries'
 import Card from './Card'
 
 const App = () => {
-  const { loading, error, data } = useQuery(GET_ALL_CHARACTERS)
+  const { loading, error, data } = useQuery(GET_ALL_CHARACTERS, {
+    variables: { page: 1 }
+  })
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error {error.message}</p>
