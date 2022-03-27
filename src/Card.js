@@ -1,15 +1,15 @@
 const Card = ( { character } ) => {
   return (
-    <div className="card w-25">
-      <img src={character.image} className="card-img-top" alt="character" />
-      <div className="card-body">
-        <h5 className="card-title, mb-0">{character.name}</h5>
-        <p className="card-text">
+    <div className="bg-black text-white h-80 rounded-lg shadow-md">
+      <img className="w-32 h-32 rounded-full mx-auto mt-7" src={character.image} className="card-img-top" alt="character" />
+      <div className="text-center mt-5">
+        <h5 className="mb-0">{character.name}</h5>
+        <p>
           {character.status} - {character.species}
         </p>
 
-        <h6 className="card-subtitle text-muted">Last known location</h6>
-        <p className="card-text">{character.location.name}</p>
+        <h6>Last known location</h6>
+        <p>{character.location.name}</p>
       </div>
     </div>
   )
