@@ -13,9 +13,9 @@ const App = () => {
   return (
     <>
       <header>
-        <h1 className="text-center m-5">Rick and Morty GraphQL App</h1>
+        <h1 className={"text-center m-3"}>Rick and Morty GraphQL App</h1>
       </header>
-      <div className="row">
+      <div className={"m-auto grid md:grid-cols-4 gap-6 p-20"}>
         {data?.characters?.results.map(character =>
           <Card character={character} key={character.id} />
         )}
