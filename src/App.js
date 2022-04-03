@@ -8,9 +8,6 @@ const App = () => {
   const { loading, error, data } = useQuery(GET_ALL_CHARACTERS, {
     variables: { page: 1 }
   })
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error {error.message}</p>
   
   const [characters, setCharacters] = useState()
   const [filterQuery, setFilterQuery] = useState()
@@ -36,6 +33,9 @@ const App = () => {
     }
   }, [data, filterQuery])
 
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error {error.message}</p>
+  
   return (
     <>
       <header>
