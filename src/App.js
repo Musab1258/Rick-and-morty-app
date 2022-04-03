@@ -12,11 +12,6 @@ const App = () => {
   const [characters, setCharacters] = useState()
   const [filterQuery, setFilterQuery] = useState()
   
-  
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error {error.message}</p>
-  
   useEffect(() => {
     if (!filterQuery) {
       setCharacters(data?.characters?.results)
@@ -37,6 +32,9 @@ const App = () => {
       setCharacters(filteredData)
     }
   }, [data, filterQuery])
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error {error.message}</p>
   
   
 
@@ -54,7 +52,7 @@ const App = () => {
           />
         </form>
       <div className={"bg-black m-auto grid md:grid-cols-3 gap-6 p-20"}>
-        {characters.map(character =>
+        {data?.characters?.results.map(character =>
           <Card character={character} key={character.id} />
         )}
       </div>
