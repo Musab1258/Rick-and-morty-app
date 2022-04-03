@@ -12,6 +12,11 @@ const App = () => {
   const [characters, setCharacters] = useState()
   const [filterQuery, setFilterQuery] = useState()
   
+  
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error {error.message}</p>
+  
   useEffect(() => {
     if (!filterQuery) {
       setCharacters(data?.characters?.results)
@@ -32,10 +37,9 @@ const App = () => {
       setCharacters(filteredData)
     }
   }, [data, filterQuery])
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error {error.message}</p>
   
+  
+
   return (
     <>
       <header>
