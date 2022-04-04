@@ -17,7 +17,7 @@ const App = () => {
       <header className="p-2">
         <h1 className="text-white text-center">Rick and Morty GraphQL App</h1>
       </header>
-      <div className="bg-black m-auto grid md:grid-cols-2 gap-6 lg:grid-cols-3 justify-items-center p-20">
+      <div className="bg-black m-auto grid md:grid-cols-2 gap-6 lg:grid-cols-3 justify-items-center">
         {data?.characters?.results.map(character =>
           <Card character={character} key={character.id} />
         )}
