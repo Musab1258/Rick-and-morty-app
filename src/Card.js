@@ -16,8 +16,8 @@ const Card = ( { character } ) => {
           <p className="mr-2">{character.species}</p>
         </div>
         <div className="flex">
-          <h6 className="mr-2">Last known location:</h6>
-          <p className="mr-2">{character.location.name}</p>
+          <h6 className="mr-1">Last known location:</h6>
+          <p className="mr-1">{character.location.name}</p>
         </div>
       </div>
     </div>
