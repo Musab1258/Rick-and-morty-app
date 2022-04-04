@@ -1,6 +1,6 @@
 const Card = ( { character } ) => {
   return (
-    <div className="bg-purple-900 border-solid text-white w-80 h-80 rounded-lg shadow-md">
+    <div className="bg-purple-900 border-solid text-white w-64 h-80 rounded-lg shadow-md">
       <img className="w-32 h-32 rounded-full mx-auto mt-7" src={character.image} alt="character" />
       <div className="text-center mt-5 p-4">
         <div className="flex">
