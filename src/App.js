@@ -12,13 +12,16 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <h1 className={"text-center m-3"}>Rick and Morty GraphQL App</h1>
+    
+      <div className="bg-black">
+      <header className="p-2">
+        <h1 className="text-white text-center">Rick and Morty GraphQL App</h1>
       </header>
-      <div className={"bg-black m-auto grid md:grid-cols-3 gap-6 p-20"}>
+      <div className="bg-black m-auto grid md:grid-cols-2 gap-6 lg:grid-cols-3 justify-items-center p-20">
         {data?.characters?.results.map(character =>
           <Card character={character} key={character.id} />
         )}
+      </div>
       </div>
     </>
 
